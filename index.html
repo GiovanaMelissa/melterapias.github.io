@@ -1,341 +1,564 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Melterapias</title>
-        <link rel="stylesheet" href="assets/css/tailwind.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js" integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melterapias</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
+        integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
 
-    <body class="font-body">
-        <!-- home section -->
-        <section class="bg-white mb-20 ">
+<body class="font-body">
+    <!-- home section -->
+    <section class="bg-white mb-20 ">
 
-            <div class="container max-w-screen-xl mx-auto px-4">
+        <div class="container max-w-screen-xl mx-auto px-4">
 
-                <nav class="flex-wrap lg:flex items-center py-5 xl:py-14 xl:relative z-10" x-data="{navbarOpen:false}">
+            <nav class="flex-wrap lg:flex items-center py-5 xl:py-14 xl:relative z-10" x-data="{navbarOpen:false}">
 
-                    <div class="flex items-center justify-between mb-10 lg:mb-0">
+                <div class="flex items-center justify-between mb-10 lg:mb-0">
 
-                        <button class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center text-green-700 border border-green-700 rounded-md" @click="navbarOpen = !navbarOpen">
-                            <i data-feather="menu"></i>
-                        </button>
-                    </div>
-
-                    <ul class="lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-16" :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
-
-                        <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                            <a href="#introducao">Introdução</a>
-                        </li>
-
-                        <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                            <a href="#tecnicas">Técnicas</a>
-                        </li>
-
-                        <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                            <a href="#fotos">Fotos</a>
-                        </li>
-
-                        <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                            <a href="#feedbacks">Feedbacks</a>
-                        </li>
-
-                        <li class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
-                            <a href="#sobre">Sobre</a>
-                        </li>
-
-                    </ul>
-
-                </nav>
-
-                <div class="flex items-center justify-center xl:justify-start">
-
-                    <div class="xl:mt-28 text-center xl:text-left">
-                        <div class="relative xl:hidden z-0 top-0 right-0">
-                            <img src="assets/image/logo.png"  >
-                        </div>
-                        <h1 class="font-semibold text-4xl md:text-6xl lg:text-7xl text-gray-900 leading-normal mb-6 whitespace-nowrap">Melissa Giovana</h1>
-                        <h1 class="font-semibold text-4xl md:text-4xl lg:text-4xl text-gray-900 leading-normal mb-6">Terapeuta Corporal</h1>
-
-                        <p class="font-normal text-xl text-gray-400 leading-relaxed mb-12">❝Pouco a pouco, o corpo vai se abrindo como uma flor: pétala por pétala❞ - Kusum Modak</p>
-
-                        <button onclick="window.location='https://wa.me/5562999596619'" class="px-6 py-4 bg-green-700 text-white font-semibold text-lg rounded-xl hover:bg-green-900 transition ease-in-out duration-500">
-                            <svg fill="#ffffff" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><title></title><path d="M6,59a1,1,0,0,1-.95-1.32L9,46.06A27.1,27.1,0,0,1,13,13,26.93,26.93,0,0,1,51,13h0A26.94,26.94,0,0,1,20.22,56.23L6.2,59Zm14.35-4.85a1,1,0,0,1,.45.11A24.94,24.94,0,0,0,49.63,14.37h0a24.93,24.93,0,0,0-35.26,0,25.08,25.08,0,0,0-3.4,31,1,1,0,0,1,.1.86L7.51,56.72,20.17,54.2Z"></path><path d="M39.17,46a8.46,8.46,0,0,1-.92,0c-5.31-.58-12-5.83-13.89-7.68h0c-1.85-1.85-7.11-8.58-7.68-13.89-.46-4.24,2.37-7.12,3.61-8.17a2.87,2.87,0,0,1,2-.69l2.7.09a1,1,0,0,1,.9.65c.6,1.59,2.54,6.88,2.54,8.25,0,1.2-1.06,2.13-2,2.95-.2.17-.47.41-.63.58a28.74,28.74,0,0,0,3.61,5.16,28.77,28.77,0,0,0,5.16,3.61c.17-.17.41-.44.58-.63.82-.94,1.75-2,3-2,1.37,0,6.66,1.94,8.25,2.54a1,1,0,0,1,.65.9l.09,2.7a3,3,0,0,1-.69,2A9.82,9.82,0,0,1,39.17,46ZM25.78,36.88c1.65,1.65,8,6.6,12.69,7.11,3.29.35,5.59-1.92,6.43-2.91a1,1,0,0,0,.22-.66l-.07-2a47.65,47.65,0,0,0-6.92-2.18c-.32,0-1.11.93-1.45,1.32-.68.78-1.22,1.39-2,1.39-1.27,0-5.7-3.28-6.69-4.27S23.75,29.23,23.75,28c0-.75.61-1.29,1.39-2,.38-.34,1.29-1.12,1.32-1.45a47.7,47.7,0,0,0-2.18-6.92l-2-.07a1,1,0,0,0-.66.22c-1,.84-3.27,3.14-2.91,6.42.51,4.72,5.46,11,7.11,12.69Zm9,0Z"></path></g></svg>
-                                <span>WhatsApp</span>
-                        </button>
-                        <button onclick="window.location='https://www.instagram.com/_melterapias/'" class="px-6 py-4 bg-green-700 text-white font-semibold text-lg rounded-xl hover:bg-green-900 transition ease-in-out duration-500">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3.06167 7.24464C3.10844 6.22264 3.26846 5.56351 3.48487 5.00402L3.48778 4.99629C3.70223 4.42695 4.03818 3.91119 4.47224 3.48489L4.47833 3.47891L4.48431 3.47282C4.91096 3.0382 5.42691 2.70258 5.99575 2.4887L6.00556 2.48495C6.56378 2.26786 7.22162 2.10843 8.24447 2.06167M3.06167 7.24464C3.0125 8.33659 2.99997 8.67508 2.99997 11.5063C2.99997 14.3381 3.01181 14.6758 3.06164 15.768M3.06167 7.24464L3.06167 7.52008M3.48867 18.0168C3.70255 18.5856 4.03817 19.1015 4.47279 19.5282L4.47887 19.5342L4.48484 19.5402C4.91116 19.9743 5.42694 20.3103 5.99628 20.5247L6.00478 20.5279C6.56351 20.7446 7.22167 20.9041 8.24447 20.9509M3.48867 18.0168L3.48492 18.0069C3.26783 17.4487 3.1084 16.7909 3.06164 15.768M3.48867 18.0168L3.47585 17.9492M3.06164 15.768L3.07839 15.8562M3.06164 15.768L3.06164 15.4919M3.47585 17.9492L3.07839 15.8562M3.47585 17.9492C3.30704 17.5033 3.13322 16.881 3.07839 15.8562M3.47585 17.9492C3.48177 17.9649 3.48768 17.9803 3.49359 17.9955C3.70766 18.5726 4.04685 19.0952 4.48679 19.5256C4.91708 19.9655 5.43944 20.3046 6.01636 20.5187C6.47934 20.699 7.13172 20.8875 8.24431 20.9385C9.3671 20.9896 9.71399 21 12.5062 21C15.2985 21 15.6457 20.9896 16.7685 20.9385C17.8824 20.8874 18.534 20.6979 18.9954 20.519C19.5726 20.305 20.0953 19.9657 20.5257 19.5256C20.9655 19.0953 21.3046 18.573 21.5187 17.9961C21.699 17.5331 21.8875 16.8808 21.9384 15.7682C21.9895 14.6454 22 14.2978 22 11.5063C22 8.71472 21.9895 8.36684 21.9384 7.24405C21.8871 6.12427 21.6959 5.47168 21.5161 5.00992C21.2811 4.40322 20.9831 3.94437 20.525 3.48627C20.0678 3.02999 19.6102 2.73179 19.003 2.49654C18.5396 2.31537 17.8866 2.12531 16.7685 2.07406C16.6712 2.06964 16.5798 2.06552 16.4921 2.06168M3.07839 15.8562C3.07684 15.8273 3.07539 15.7981 3.07403 15.7685C3.06961 15.6712 3.06548 15.5797 3.06164 15.4919M8.24447 2.06167C9.33668 2.01184 9.67505 2 12.5062 2C15.3374 2 15.6756 2.01252 16.7675 2.06168M8.24447 2.06167L8.52062 2.06167M16.7675 2.06168L16.4921 2.06168M16.7675 2.06168C17.7897 2.10844 18.4489 2.26844 19.0085 2.48487L19.0162 2.48781C19.5855 2.70226 20.1013 3.03821 20.5276 3.47227L20.5335 3.4783L20.5396 3.48422C20.9737 3.91055 21.3096 4.42646 21.5239 4.99596L21.5275 5.00559C21.7446 5.56381 21.9041 6.22165 21.9508 7.2445M8.52062 2.06167L16.4921 2.06168M8.52062 2.06167C9.44548 2.02123 9.95666 2.01253 12.5062 2.01253C15.056 2.01253 15.5671 2.02124 16.4921 2.06168M8.52062 2.06167C8.43284 2.06551 8.34134 2.06964 8.24402 2.07406C7.13004 2.12512 6.47843 2.31464 6.01708 2.49358C5.43767 2.70837 4.91328 3.04936 4.48192 3.49186C4.0281 3.94756 3.73105 4.40422 3.49655 5.0094C3.31536 5.4728 3.12527 6.12614 3.07402 7.24434C3.06961 7.34135 3.06549 7.43257 3.06167 7.52008M21.9508 15.768C21.9041 16.7908 21.7446 17.449 21.5279 18.0077L21.5247 18.0162C21.3102 18.5856 20.9743 19.1013 20.5402 19.5276L20.5341 19.5336L20.5282 19.5397C20.1015 19.9743 19.5856 20.3099 19.0167 20.5238L19.0069 20.5276C18.4487 20.7447 17.7908 20.9041 16.768 20.9509M3.06164 15.4919C3.0212 14.567 3.0125 14.0558 3.0125 11.5063C3.0125 8.95591 3.0212 8.44544 3.06167 7.52008M3.06164 15.4919L3.06167 7.52008M10.8155 15.5881C11.3515 15.8101 11.926 15.9244 12.5062 15.9244C13.678 15.9244 14.8018 15.4589 15.6304 14.6304C16.4589 13.8018 16.9244 12.678 16.9244 11.5063C16.9244 10.3345 16.4589 9.21072 15.6304 8.38215C14.8018 7.55359 13.678 7.0881 12.5062 7.0881C11.926 7.0881 11.3515 7.20238 10.8155 7.42442C10.2794 7.64645 9.79239 7.97189 9.38213 8.38215C8.97187 8.79242 8.64643 9.27947 8.42439 9.81551C8.20236 10.3515 8.08808 10.9261 8.08808 11.5063C8.08808 12.0865 8.20236 12.661 8.42439 13.197C8.64643 13.7331 8.97187 14.2201 9.38213 14.6304C9.79239 15.0406 10.2794 15.3661 10.8155 15.5881ZM9.37229 8.37231C10.2035 7.54113 11.3308 7.07418 12.5062 7.07418C13.6817 7.07418 14.809 7.54113 15.6402 8.37231C16.4714 9.20349 16.9383 10.3308 16.9383 11.5063C16.9383 12.6817 16.4714 13.809 15.6402 14.6402C14.809 15.4714 13.6817 15.9383 12.5062 15.9383C11.3308 15.9383 10.2035 15.4714 9.37229 14.6402C8.54111 13.809 8.07416 12.6817 8.07416 11.5063C8.07416 10.3308 8.54111 9.20349 9.37229 8.37231ZM19.434 6.04229C19.434 6.37873 19.3003 6.70139 19.0625 6.93929C18.8246 7.17719 18.5019 7.31084 18.1655 7.31084C17.829 7.31084 17.5064 7.17719 17.2685 6.93929C17.0306 6.70139 16.8969 6.37873 16.8969 6.04229C16.8969 5.70585 17.0306 5.38319 17.2685 5.1453C17.5064 4.9074 17.829 4.77375 18.1655 4.77375C18.5019 4.77375 18.8246 4.9074 19.0625 5.1453C19.3003 5.38319 19.434 5.70585 19.434 6.04229Z" stroke="#ffffff" stroke-linejoin="round"></path> </g></svg>
-                            <span>Instagram</span>
+                    <button
+                        class="lg:hidden w-10 h-10 ml-auto flex items-center justify-center text-green-700 border border-green-700 rounded-md"
+                        @click="navbarOpen = !navbarOpen">
+                        <i data-feather="menu"></i>
                     </button>
-                    </div>
-
-                    <div class="relative hidden xl:block z-0 top-0 right-0">
-                        <img src="assets/image/firula1.png" class="absolute left-2" style="top: 400px; " >
-                        <img src="assets/image/eightDots.png" class="absolute bottom-10">
-                        <img src="assets/image/imageMelTerapia2.jpeg" class="pl-20" alt="Home img">
-                    </div>
-
                 </div>
 
-            </div> <!-- container.// -->
+                <ul class="lg:flex flex-col lg:flex-row lg:items-center lg:mx-auto lg:space-x-8 xl:space-x-16"
+                    :class="{'hidden':!navbarOpen,'flex':navbarOpen}">
 
-        </section>
-        <!-- home section //nd -->
+                    <li
+                        class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#introducao">Introdução</a>
+                    </li>
 
-        <!-- feature section -->
-        <section class="bg-white py-10 md:py-16 xl:relative" id="tecnicas">
+                    <li
+                        class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#tecnicas">Técnicas</a>
+                    </li>
 
-            <div class="container max-w-screen-xl mx-auto px-4">
+                    <li
+                        class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#fotos">Fotos</a>
+                    </li>
 
-            <div class="flex flex-col xl:flex-row justify-end">
+                    <li
+                        class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#feedbacks">Feedbacks</a>
+                    </li>
 
-                    <div class="hidden xl:block left-0 bottom-0">
-                        <img src="assets/image/melterapia3.png" style="width: 100rem;" alt="Feature img">
+                    <li
+                        class="font-semibold text-gray-900 text-lg hover:text-gray-400 transition ease-in-out duration-300 mb-5 lg:mb-0">
+                        <a href="#sobre">Sobre</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="flex items-center justify-center xl:justify-start">
+
+                <div class="xl:mt-28 text-center xl:text-left">
+                    <div class="relative xl:hidden z-0 top-0 right-0">
+                        <img src="assets/image/logo.png">
                     </div>
+                    <h1
+                        class="font-semibold text-4xl md:text-6xl lg:text-7xl text-gray-900 leading-normal mb-6 whitespace-nowrap">
+                        Melissa Giovana</h1>
+                    <h1 class="font-semibold text-4xl md:text-4xl lg:text-4xl text-gray-900 leading-normal mb-6">
+                        Terapeuta Corporal</h1>
 
-                    <div class="xl:ml-20 pl-0">
+                    <p class="font-normal text-xl text-gray-400 leading-relaxed mb-12">❝Pouco a pouco, o corpo vai se
+                        abrindo como uma flor: pétala por pétala❞ - Kusum Modak</p>
 
-                        <h1 class="font-semibold text-gray-900 text-4xl text-center leading-normal mb-6">Técnicas</h1>
+                    <button onclick="window.location='https://wa.me/5562999596619'"
+                        class="px-6 py-4 bg-green-700 text-white font-semibold text-lg rounded-xl hover:bg-green-900 transition ease-in-out duration-500">
+                        <svg fill="#ffffff" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title></title>
+                                <path
+                                    d="M6,59a1,1,0,0,1-.95-1.32L9,46.06A27.1,27.1,0,0,1,13,13,26.93,26.93,0,0,1,51,13h0A26.94,26.94,0,0,1,20.22,56.23L6.2,59Zm14.35-4.85a1,1,0,0,1,.45.11A24.94,24.94,0,0,0,49.63,14.37h0a24.93,24.93,0,0,0-35.26,0,25.08,25.08,0,0,0-3.4,31,1,1,0,0,1,.1.86L7.51,56.72,20.17,54.2Z">
+                                </path>
+                                <path
+                                    d="M39.17,46a8.46,8.46,0,0,1-.92,0c-5.31-.58-12-5.83-13.89-7.68h0c-1.85-1.85-7.11-8.58-7.68-13.89-.46-4.24,2.37-7.12,3.61-8.17a2.87,2.87,0,0,1,2-.69l2.7.09a1,1,0,0,1,.9.65c.6,1.59,2.54,6.88,2.54,8.25,0,1.2-1.06,2.13-2,2.95-.2.17-.47.41-.63.58a28.74,28.74,0,0,0,3.61,5.16,28.77,28.77,0,0,0,5.16,3.61c.17-.17.41-.44.58-.63.82-.94,1.75-2,3-2,1.37,0,6.66,1.94,8.25,2.54a1,1,0,0,1,.65.9l.09,2.7a3,3,0,0,1-.69,2A9.82,9.82,0,0,1,39.17,46ZM25.78,36.88c1.65,1.65,8,6.6,12.69,7.11,3.29.35,5.59-1.92,6.43-2.91a1,1,0,0,0,.22-.66l-.07-2a47.65,47.65,0,0,0-6.92-2.18c-.32,0-1.11.93-1.45,1.32-.68.78-1.22,1.39-2,1.39-1.27,0-5.7-3.28-6.69-4.27S23.75,29.23,23.75,28c0-.75.61-1.29,1.39-2,.38-.34,1.29-1.12,1.32-1.45a47.7,47.7,0,0,0-2.18-6.92l-2-.07a1,1,0,0,0-.66.22c-1,.84-3.27,3.14-2.91,6.42.51,4.72,5.46,11,7.11,12.69Zm9,0Z">
+                                </path>
+                            </g>
+                        </svg>
+                        <span>WhatsApp</span>
+                    </button>
+                    <button onclick="window.location='https://www.instagram.com/_melterapias/'"
+                        class="px-6 py-4 bg-green-700 text-white font-semibold text-lg rounded-xl hover:bg-green-900 transition ease-in-out duration-500">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M3.06167 7.24464C3.10844 6.22264 3.26846 5.56351 3.48487 5.00402L3.48778 4.99629C3.70223 4.42695 4.03818 3.91119 4.47224 3.48489L4.47833 3.47891L4.48431 3.47282C4.91096 3.0382 5.42691 2.70258 5.99575 2.4887L6.00556 2.48495C6.56378 2.26786 7.22162 2.10843 8.24447 2.06167M3.06167 7.24464C3.0125 8.33659 2.99997 8.67508 2.99997 11.5063C2.99997 14.3381 3.01181 14.6758 3.06164 15.768M3.06167 7.24464L3.06167 7.52008M3.48867 18.0168C3.70255 18.5856 4.03817 19.1015 4.47279 19.5282L4.47887 19.5342L4.48484 19.5402C4.91116 19.9743 5.42694 20.3103 5.99628 20.5247L6.00478 20.5279C6.56351 20.7446 7.22167 20.9041 8.24447 20.9509M3.48867 18.0168L3.48492 18.0069C3.26783 17.4487 3.1084 16.7909 3.06164 15.768M3.48867 18.0168L3.47585 17.9492M3.06164 15.768L3.07839 15.8562M3.06164 15.768L3.06164 15.4919M3.47585 17.9492L3.07839 15.8562M3.47585 17.9492C3.30704 17.5033 3.13322 16.881 3.07839 15.8562M3.47585 17.9492C3.48177 17.9649 3.48768 17.9803 3.49359 17.9955C3.70766 18.5726 4.04685 19.0952 4.48679 19.5256C4.91708 19.9655 5.43944 20.3046 6.01636 20.5187C6.47934 20.699 7.13172 20.8875 8.24431 20.9385C9.3671 20.9896 9.71399 21 12.5062 21C15.2985 21 15.6457 20.9896 16.7685 20.9385C17.8824 20.8874 18.534 20.6979 18.9954 20.519C19.5726 20.305 20.0953 19.9657 20.5257 19.5256C20.9655 19.0953 21.3046 18.573 21.5187 17.9961C21.699 17.5331 21.8875 16.8808 21.9384 15.7682C21.9895 14.6454 22 14.2978 22 11.5063C22 8.71472 21.9895 8.36684 21.9384 7.24405C21.8871 6.12427 21.6959 5.47168 21.5161 5.00992C21.2811 4.40322 20.9831 3.94437 20.525 3.48627C20.0678 3.02999 19.6102 2.73179 19.003 2.49654C18.5396 2.31537 17.8866 2.12531 16.7685 2.07406C16.6712 2.06964 16.5798 2.06552 16.4921 2.06168M3.07839 15.8562C3.07684 15.8273 3.07539 15.7981 3.07403 15.7685C3.06961 15.6712 3.06548 15.5797 3.06164 15.4919M8.24447 2.06167C9.33668 2.01184 9.67505 2 12.5062 2C15.3374 2 15.6756 2.01252 16.7675 2.06168M8.24447 2.06167L8.52062 2.06167M16.7675 2.06168L16.4921 2.06168M16.7675 2.06168C17.7897 2.10844 18.4489 2.26844 19.0085 2.48487L19.0162 2.48781C19.5855 2.70226 20.1013 3.03821 20.5276 3.47227L20.5335 3.4783L20.5396 3.48422C20.9737 3.91055 21.3096 4.42646 21.5239 4.99596L21.5275 5.00559C21.7446 5.56381 21.9041 6.22165 21.9508 7.2445M8.52062 2.06167L16.4921 2.06168M8.52062 2.06167C9.44548 2.02123 9.95666 2.01253 12.5062 2.01253C15.056 2.01253 15.5671 2.02124 16.4921 2.06168M8.52062 2.06167C8.43284 2.06551 8.34134 2.06964 8.24402 2.07406C7.13004 2.12512 6.47843 2.31464 6.01708 2.49358C5.43767 2.70837 4.91328 3.04936 4.48192 3.49186C4.0281 3.94756 3.73105 4.40422 3.49655 5.0094C3.31536 5.4728 3.12527 6.12614 3.07402 7.24434C3.06961 7.34135 3.06549 7.43257 3.06167 7.52008M21.9508 15.768C21.9041 16.7908 21.7446 17.449 21.5279 18.0077L21.5247 18.0162C21.3102 18.5856 20.9743 19.1013 20.5402 19.5276L20.5341 19.5336L20.5282 19.5397C20.1015 19.9743 19.5856 20.3099 19.0167 20.5238L19.0069 20.5276C18.4487 20.7447 17.7908 20.9041 16.768 20.9509M3.06164 15.4919C3.0212 14.567 3.0125 14.0558 3.0125 11.5063C3.0125 8.95591 3.0212 8.44544 3.06167 7.52008M3.06164 15.4919L3.06167 7.52008M10.8155 15.5881C11.3515 15.8101 11.926 15.9244 12.5062 15.9244C13.678 15.9244 14.8018 15.4589 15.6304 14.6304C16.4589 13.8018 16.9244 12.678 16.9244 11.5063C16.9244 10.3345 16.4589 9.21072 15.6304 8.38215C14.8018 7.55359 13.678 7.0881 12.5062 7.0881C11.926 7.0881 11.3515 7.20238 10.8155 7.42442C10.2794 7.64645 9.79239 7.97189 9.38213 8.38215C8.97187 8.79242 8.64643 9.27947 8.42439 9.81551C8.20236 10.3515 8.08808 10.9261 8.08808 11.5063C8.08808 12.0865 8.20236 12.661 8.42439 13.197C8.64643 13.7331 8.97187 14.2201 9.38213 14.6304C9.79239 15.0406 10.2794 15.3661 10.8155 15.5881ZM9.37229 8.37231C10.2035 7.54113 11.3308 7.07418 12.5062 7.07418C13.6817 7.07418 14.809 7.54113 15.6402 8.37231C16.4714 9.20349 16.9383 10.3308 16.9383 11.5063C16.9383 12.6817 16.4714 13.809 15.6402 14.6402C14.809 15.4714 13.6817 15.9383 12.5062 15.9383C11.3308 15.9383 10.2035 15.4714 9.37229 14.6402C8.54111 13.809 8.07416 12.6817 8.07416 11.5063C8.07416 10.3308 8.54111 9.20349 9.37229 8.37231ZM19.434 6.04229C19.434 6.37873 19.3003 6.70139 19.0625 6.93929C18.8246 7.17719 18.5019 7.31084 18.1655 7.31084C17.829 7.31084 17.5064 7.17719 17.2685 6.93929C17.0306 6.70139 16.8969 6.37873 16.8969 6.04229C16.8969 5.70585 17.0306 5.38319 17.2685 5.1453C17.5064 4.9074 17.829 4.77375 18.1655 4.77375C18.5019 4.77375 18.8246 4.9074 19.0625 5.1453C19.3003 5.38319 19.434 5.70585 19.434 6.04229Z"
+                                    stroke="#ffffff" stroke-linejoin="round"></path>
+                            </g>
+                        </svg>
+                        <span>Instagram</span>
+                    </button>
+                </div>
 
-                        <p class="font-normal text-gray-400 text-xl text-center mb-16">Podem-se empregar diversas técnicas, adaptadas conforme a necessidade específica de cada paciente.</p>
-
-                        <div class="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5">
-                            <div class="px-8 h-32 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
-                                <svg fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 461.479 461.479" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <polygon points="176.13,269.017 153.73,272.493 153.73,299.368 184.191,299.368 "></polygon> <path d="M66.283,226.6l1.957,0.29c5.369-7.314,13.259-12.107,22.226-13.497l59.144-9.178c1.217-3.415,2.61-7.169,4.121-11.123 v10.483l42.225-6.553c5.613-0.871,11.317-0.334,16.672,1.582l22.511-3.233v-15.478c10.989,16.385,12.064,17.987,19.292,28.765 l-47.337,6.799c-8.402,1.206-14.235,8.996-13.028,17.397c1.211,8.423,9.019,14.236,17.398,13.028l69.548-9.923 c5.585-0.797,10.375-4.393,12.699-9.533c2.325-5.14,1.867-11.116-1.227-15.833c-7.182-10.947-19.608-29.614-43.783-65.66 c-2.854-4.255-7.641-6.808-12.764-6.808c-4.449,0-58.545,0-82.673,0c-6.132,0-11.677,3.645-14.109,9.274 c-6.588,15.249-16.309,38.68-21.553,55.729l-46.816-6.934c-8.394-1.249-16.211,4.554-17.455,12.951 C52.088,217.54,57.886,225.355,66.283,226.6z"></path> <circle cx="194.601" cy="96.119" r="31.853"></circle> <path d="M92.902,229.1c-9.909,1.537-16.695,10.816-15.157,20.725c1.537,9.905,10.81,16.701,20.725,15.156l87.469-13.572 c-3.975-4.457-6.714-10.063-7.61-16.294c-0.997-6.941,0.335-13.856,3.748-19.853L92.902,229.1z"></path> <path d="M219.903,278.032c3.513-2.363,7.204-4.385,11.027-6.067l-3.279-12.347l-13.922,2c-9.418,1.358-18.462-1.668-25.126-7.56 l11.653,43.876C205.384,290.102,212.021,283.335,219.903,278.032z"></path> <path d="M259.326,282.704c-19.935,0-37.865,10.94-47.208,27.838c80.688,7.065,120.864,10.297,125.708,11.852 c0.051,0.016,0.037,0.09-0.016,0.09H188.137c-8.146,0-15.156,6.26-15.539,14.397c-0.41,8.688,6.513,15.861,15.112,15.861 c165.351,0,161.221-0.107,161.147-0.109c0.039,0,0.077,0,0.116,0c10.527,0,19.092-8.51,19.146-19.047 c0.128-24.901,0.128-21.777,0.075-23.241c-0.549-15.127-12.875-27.153-28.012-27.23l-80.578-0.411 C259.512,282.704,259.417,282.704,259.326,282.704z"></path> <path d="M29.913,352.379c5.524,0,126.209,0,129.872,0c-2.11-3.617-3.479-7.743-3.871-12.19 c-0.829-9.41,2.887-18.169,9.326-24.122c-10.083,0-130.653,0-135.327,0c-10.028,0-18.156,8.129-18.156,18.156 C11.757,344.249,19.885,352.379,29.913,352.379z"></path> <path d="M445.759,365.775c-4.732,0-425.953,0-430.039,0c-8.682,0-15.72,7.038-15.72,15.719c0,8.681,7.038,15.719,15.72,15.719 h430.039c8.682,0,15.72-7.038,15.72-15.719C461.479,372.814,454.44,365.775,445.759,365.775z"></path> <path d="M388.814,351.382h55.716c3.136,0,5.678-2.542,5.678-5.678c0-17.413,0.05-16.531-0.078-17.331 c-0.432-2.707-2.771-4.778-5.6-4.778h-10.118c7.726-5.797,12.751-15.008,12.815-25.41c0.109-17.672-14.127-32.086-31.799-32.195 c-0.068,0-0.135,0-0.202,0c-17.578,0-31.884,14.196-31.993,31.799c-0.065,10.546,4.981,19.929,12.815,25.807h-7.234 c-3.136,0-5.678,2.542-5.678,5.678c0,3.544,0,13.041,0,16.431C383.136,348.84,385.678,351.382,388.814,351.382z"></path> </g> </g> </g> </g></svg>
-                            </div>
-
-                            <div class="text-center md:text-left">
-                                <h4 class="font-semibold text-gray-900 text-2xl mb-2">Yoga Massagem Ayurvédica</h4>
-                                <p class="font-normal text-gray-400 text-md leading-relaxed break-all">A prática combina Yoga e Massagem Ayurvédica, enfocando respiração, circulação e energia vital. Com deslizamentos e alongamentos, promove relaxamento físico e mental, buscando bem-estar completo.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5">
-                            <div class="px-8 h-32 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
-                                <svg fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 461.173 461.173" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M199.177,284.502c5.276-8.499,12.431-16.011,21.484-21.907c-1.518-2.205-2.612-4.708-3.164-7.383l-12.101-59.167 l26.176,52.095c2.273,4.524,6.66,7.61,11.686,8.221l59.965,7.286c8.289,1.006,15.825-4.895,16.833-13.186 c1.007-8.289-4.896-15.826-13.186-16.833l-51.918-6.308l-22.537-44.852l17.329,19.384l2.66-9.284 c3.429-11.969-3.494-24.451-15.463-27.88l-36.876-10.565c-12.625-3.617-25.681,4.296-28.3,17.18 c-24.04,118.252-22.612,110.378-22.612,113.199H199.177z"></path> <circle cx="236.485" cy="112.261" r="33.371"></circle> <path d="M301.324,279.283c-7.19-0.874-56.242-6.833-62.225-7.561c-11.444,4.593-21.079,13.021-27.121,23.947 c131.057,11.545,122.354,10.415,125.87,11.934H187.585c-8.35,0-15.119,6.769-15.119,15.119s6.769,15.119,15.119,15.119 c164.747,0,161.159-0.109,161.159-0.109c10.519,0,19.078-8.505,19.132-19.034l0.111-21.598 c0.081-15.858-12.724-28.762-28.549-28.843l-10.519-0.054C322.443,276.09,312.204,280.605,301.324,279.283z"></path> <path d="M414.758,321.053c0.068,0,0.135,0.001,0.202,0.001c17.567,0,31.863-14.186,31.972-31.778 c0.109-17.66-14.118-32.064-31.778-32.174c-0.068,0-0.135-0.001-0.202-0.001c-17.567,0.001-31.862,14.186-31.971,31.778 C382.871,306.539,397.098,320.944,414.758,321.053z"></path> <path d="M29.893,337.478c4.434,0,124.984,0,129.787,0c-2.109-3.615-3.477-7.738-3.869-12.183 c-0.829-9.404,2.885-18.157,9.319-24.106c-10.076,0-130.567,0-135.237,0c-10.021,0-18.144,8.123-18.144,18.144 C11.749,329.354,19.872,337.478,29.893,337.478z"></path> <path d="M445.464,350.864c-4.729,0-425.67,0-429.755,0C7.033,350.864,0,357.897,0,366.574c0,8.676,7.033,15.709,15.709,15.709 h429.755c8.676,0,15.709-7.033,15.709-15.709C461.173,357.897,454.14,350.864,445.464,350.864z"></path> </g> </g> </g> </g></svg>
-                            </div>
-
-                            <div class="text-center md:text-left">
-                                <h4 class="font-semibold text-gray-900 text-2xl mb-2">Thai Yoga Massagem</h4>
-                                <p class="font-normal text-gray-400 text-md leading-relaxed">Thai Yoga Massagem: Essa técnica combina alongamentos assistidos, pressões rítmicas e manipulações articulares. De uma forma geral promove alívio de dores musculares, proporcionando relaxamento e equilíbrio corpo e mente.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5">
-                            <div class="px-8 h-32 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
-                                <svg fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.042 460.042" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M287.523,224.484v-27.015l-22.807,3.276c-6.099,0.879-12.209-0.249-17.568-3.191c-1.118,2.036-2.395,3.971-3.804,5.8 h3.696C263.673,203.354,278.477,211.597,287.523,224.484z"></path> <circle cx="245.451" cy="33.06" r="33.06"></circle> <path d="M152.77,370.686l0.571-0.284c-0.822-0.771,1.507,1.574-27.72-28.149l-6.049,3.006c-9.159,4.55-12.99,15.597-8.614,24.84 l37.48,79.196c4.436,9.376,15.633,13.371,24.997,8.938c9.372-4.435,13.373-15.626,8.938-24.997L152.77,370.686z"></path> <path d="M289.957,345.259l-5.913-2.938c-28.95,29.441-26.885,27.368-27.722,28.148l0.437,0.217l-29.601,62.55 c-4.436,9.371-0.434,20.562,8.938,24.997c9.363,4.433,20.56,0.439,24.997-8.938l37.479-79.196 C302.946,360.855,299.116,349.809,289.957,345.259z"></path> <path d="M226.42,361.277c6.16,6.059,16.066,5.973,22.122-0.186l37.123-37.753c3.266-3.32,4.881-7.923,4.408-12.556 c-0.688-6.739-5.404-52.971-6.028-59.08c-0.558-19.915-16.982-35.975-37.005-35.975h-18.399 c-6.216,3.271-13.285,5.132-20.784,5.132c-7.335,0-14.482-1.817-20.784-5.132h-24.382c-20.023,0-36.447,16.06-37.005,35.975 c-0.623,6.109-5.34,52.34-6.028,59.08c-0.472,4.633,1.143,9.236,4.408,12.556l37.123,37.753 c6.057,6.161,15.961,6.243,22.122,0.186s6.244-15.961,0.186-22.122l-31.969-32.511c5.795-56.801,5.422-52.836,5.429-53.927 c0.009-1.759,1.439-3.178,3.197-3.173c1.758,0.005,3.18,1.431,3.18,3.189v48.582l28.829,29.318 c5.498,5.592,8.142,12.919,7.961,20.184h9.482c-0.181-7.266,2.463-14.593,7.961-20.184l28.625-29.111V252.96 c0-1.772,1.401-3.227,3.172-3.292c1.771-0.066,3.278,1.28,3.408,3.047c0,0.001,0,0.001,0,0.001 c0.08,1.089,0.699,7.348,5.429,53.928l-31.969,32.511C220.176,345.316,220.26,355.221,226.42,361.277z"></path> <path d="M207.858,143.645c-17.905,0-32.421,14.515-32.421,32.421s14.515,32.421,32.421,32.421 c13.296,0,24.717-8.008,29.719-19.46c-2.534-3.565-4.277-7.742-4.93-12.291c-0.867-6.035,0.206-12.05,3.027-17.327 C230.006,149.966,219.671,143.645,207.858,143.645z"></path> <path d="M348.171,153.161l-0.018-0.027l-0.061-0.091c-5.438-8.107-40.839-60.893-46.492-69.321 c-2.961-4.416-7.93-7.066-13.247-7.066c-2.636,0,12.086,0-85.805,0c-1.811,0-3.607,0.308-5.314,0.911l-62.171,21.966 c-8.975,3.171-13.183,13.451-9.04,21.998l28.178,58.134c2.153,4.442,6.098,7.425,10.543,8.522 c-1.087-3.859-1.681-7.922-1.681-12.123c0-11.088,4.058-21.24,10.756-29.07l-11.306-23.324l40.518-14.317v22.181 c1.586-0.171,3.195-0.264,4.826-0.264c14.872,0,28.066,7.291,36.218,18.479c3.674-2.664,7.962-4.416,12.581-5.079l30.867-4.433 v-20.231c12.834,19.136,10.648,15.876,20.023,29.855l-48.241,6.929c-10.569,1.519-15.567,10.139-14.412,18.184 c1.252,8.719,9.375,14.773,18.057,13.521l74.24-10.663C348.616,176.196,354.801,163.084,348.171,153.161z"></path> </g> </g> </g> </g></svg>
-                            </div>
-
-                            <div class="text-center md:text-left">
-                                <h4 class="font-semibold text-gray-900 text-2xl mb-2">Massagem Abhyanga</h4>
-                                <p class="font-normal text-gray-400 text-md leading-relaxed">A massagem ayurvédica "abhyanga" da Índia utiliza movimentos suaves com óleos aquecidos, promovendo bem-estar físico e mental. Recomendada para dores crônicas e problemas articulares.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5">
-                            <div class="px-8 h-32 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
-                                <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 945.405 945.405" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M615.6,894.153H0v-57.4c11.2,8.9,25.5,14.301,40.9,14.301h532.2L615.6,894.153z M266.4,51.252c-33,0-59.8,26.8-59.8,59.8 c0,20.5,10.3,38.6,26.1,49.4c6.8-18.8,17.8-36.1,32.4-50.7s31.9-25.6,50.7-32.4C305,61.553,286.9,51.252,266.4,51.252z M249.3,207.953c0,63,51.101,114,114,114c62.9,0,114-51.1,114-114c0-63-51.1-114-114-114c-13.399,0-26.2,2.3-38.1,6.5 c-32.3,11.5-58,37.1-69.4,69.4C251.6,181.853,249.3,194.652,249.3,207.953z M187.4,365.252c-26.7,59.2-84.9,210.5-100.9,248.6 h198.6c4.4-10.799,9.301-21.299,14.7-31.199c18.7-34.9,77.101-52.201,63.2-100.9c-0.1-0.4-0.3-0.801-0.4-1.301l52.301,49.602 c3.899,3.699,8.6,6.699,13.6,8.6l143,54.6c4.8,1.801,9.8,2.699,14.7,2.699c16.6,0,32.2-10.1,38.399-26.5 c8.101-21.199-2.5-45-23.8-53.1L474.4,468.053c-5.9-2.3-11.301-5.7-15.9-10c0,0-111.3-105.6-111.4-105.7 c-4.699-4.5-10.8-7.4-17.199-9.5c-1.5-0.5-3.101-1-4.7-1.4c-1.7-0.5-3.5-1-5.3-1.4c-27.801-7.4-58.7-13.7-87.3-11.2 c-9.4,0.8-19.7,3.2-27.7,8.7C195.7,344.152,191.9,355.353,187.4,365.252z M40.9,826.053h542.6l52,52.699c4.9,5,10.8,8.9,17.1,11.5 c6.2,2.5,12.801,3.9,19.601,3.9h221.6c28.8,0,52-23.6,51.601-52.4c-0.5-28.301-24.101-50.699-52.4-50.699H693.8L558.4,653.653 c-10.5-10.701-16.7-15.1-35.5-15.1c-32.4,0-482,0.299-482,0.299c-22.6,0-40.9,18.301-40.9,40.9v94.801v10.6 C0,807.752,18.3,826.053,40.9,826.053z M871,637.452c0-65.299-53-118.299-118.3-118.299s-118.3,53-118.3,118.299 c0,65.301,53,118.301,118.3,118.301S871,702.852,871,637.452z"></path> </g> </g></svg>
-                            </div>
-
-                            <div class="text-center md:text-left">
-                                <h4 class="font-semibold text-gray-900 text-2xl mb-2">Massagem Terapêutica</h4>
-                                <p class="font-normal text-gray-400 text-md leading-relaxed">Técnica manual para alívio de tensões musculares, melhoria da circulação e redução do estresse, proporcionando benefícios físicos e mentais, incluindo tratamento de dores musculares.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5">
-                            <div class="px-8 h-32 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
-                                <svg fill="#000000" height="64px" width="64px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 465.647 465.647" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="XMLID_117_"> <path id="XMLID_118_" d="M395.675,327.22c33.594,0,60.802-27.224,60.802-60.801c0-33.577-27.208-60.809-60.802-60.809 c-33.576,0-60.801,27.232-60.801,60.809C334.874,299.995,362.099,327.22,395.675,327.22z"></path> <path id="XMLID_119_" d="M146.247,66.868c3.805,1.433,7.896,1.275,11.909,0.049c-0.335,13.906,3.819,27.997,13.293,39.626 c21.063,25.887,59.145,29.788,85.031,8.717c25.888-21.071,29.789-59.136,8.709-85.032c-20.681-25.417-57.681-29.509-83.535-9.711 c-1.8-7.284-5.986-13-12.163-15.325c-12.1-4.56-27.129,5.558-33.545,22.584C129.53,44.811,134.163,62.316,146.247,66.868z"></path> <path id="XMLID_120_" d="M433.041,395.233h-80.988l-12.052-21.764c4.043-9.918,4.951-21.182,1.672-32.239 c-6.528-22.004-27.208-35.814-49.147-34.756c4.791-3.375,8.82-7.96,11.272-13.754c7.02-16.582-0.717-35.719-17.307-42.748 l-59.988-25.434l-36.729-37.11c0.319-1.33,0.446-2.237,0.256-2.237c5.714-19.456-1.067-41.306-18.5-53.765 c-22.019-15.745-52.634-10.65-68.364,11.368c0,0-36.902,60.49-55.038,81.219C37.684,235.851,28.704,241.63,0,265.049v39.873 c2.005-0.111,4.299-0.246,7.165-0.406c8.676-0.279,21.062-0.685,35.933-1.171c14.87-0.31,32.223-0.597,50.817-0.469 c9.283,0.063,18.898,0.135,28.658,0.199c2.754,0.047,5.54,0.096,8.31,0.151c1.417-1.648,2.963-3.272,4.315-4.935 c10.173-12.069,19.773-28.436,28.053-44.968l21.428,21.66c2.993,3.024,6.544,5.429,10.46,7.083l65.912,27.941 c3.103,1.314,6.288,1.95,9.488,2.277c-24.104,9.019-84.857,30.568-120.454,32.589c-24.44,0.271-80.561-1.003-150.085,0.978v67.337 v47.182c40.248,1.146,114.136,1.925,154.208,0.039c48.064-3.717,101.892-26.197,135.213-43.645l14.886,26.874 c5.748,10.372,16.669,16.805,28.53,16.805h100.204c18.007,0,32.606-14.601,32.606-32.605 C465.647,409.832,451.048,395.233,433.041,395.233z"></path> </g> </g></svg>
-                            </div>
-
-                            <div class="text-center md:text-left">
-                                <h4 class="font-semibold text-gray-900 text-2xl mb-2">Massagem integrativa para alívio da dor</h4>
-                                <p class="font-normal text-gray-400 text-md leading-relaxed">A terapia integrativa trata a dor por meio de pontos gatilhos, relaxamento muscular e alongamentos. A avaliação inicial define o número de sessões, focando em abordagens nos pontos de tensão para melhorar a amplitude de movimento.</p>
-                            </div>
-                        </div>
-
-                    </div>
+                <div class="relative hidden xl:block z-0 top-0 right-0">
+                    <img src="assets/image/firula1.png" class="absolute left-2" style="top: 400px; ">
+                    <img src="assets/image/eightDots.png" class="absolute bottom-10">
+                    <img src="assets/image/imageMelTerapia2.jpeg" class="pl-20" alt="Home img">
+                </div>
 
             </div>
 
-            </div> <!-- container.// -->
+        </div> <!-- container.// -->
 
-        </section>
-        <!-- feature section //end -->
+    </section>
+    <!-- home section //nd -->
 
-        <!-- gallery section -->
-        <section class="bg-white py-10 md:py-16" id="fotos">
+    <!-- feature section -->
+    <section class="bg-white py-10 md:py-16 xl:relative" id="tecnicas">
 
-            <div class="container max-w-screen-xl mx-auto px-4">
+        <div class="container max-w-screen-xl mx-auto px-4">
 
-                <h1 class="font-semibold text-gray-900 text-4xl text-center mb-10">Fotos</h1>
+            <div class="flex flex-col xl:flex-row justify-end">
 
-
-
-                <div class="flex space-x-4 md:space-x-6 lg:space-x-8">
-                    <div>
-                        <img src="assets/image/gallery-1.png" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500">
-                        <img src="assets/image/gallery-4.png" alt="image" class="hover:opacity-75 transition ease-in-out duration-500">
-                    </div>
-
-                    <div>
-                        <img src="assets/image/gallery-2.png" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500">
-                        <img src="assets/image/gallery-5.png" alt="image" class="mb-3 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500">
-                        <img src="assets/image/gallery-6.png" alt="image" class="hover:opacity-75 transition ease-in-out duration-500">
-                    </div>
-
-                    <div>
-                        <img src="assets/image/gallery-3.png" alt="image" class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500">
-                        <img src="assets/image/gallery-7.png" alt="image" class="hover:opacity-75 transition ease-in-out duration-500">
-                    </div>
+                <div class="hidden xl:block left-0 bottom-0">
+                    <img src="assets/image/melterapia3.png" style="width: 100rem;" alt="Feature img">
                 </div>
 
-            </div> <!-- container.// -->
+                <div class="xl:ml-20 pl-0">
 
-        </section>
-        <!-- gallery section //end -->
+                    <h1 class="font-semibold text-gray-900 text-4xl text-center leading-normal mb-6">Técnicas</h1>
 
-        <!-- testimoni section -->
-        <section class="bg-white py-10 md:py-16" id="feedbacks">
+                    <p class="font-normal text-gray-400 text-xl text-center mb-16">Podem-se empregar diversas técnicas,
+                        adaptadas conforme a necessidade específica de cada paciente.</p>
 
-            <div class="container max-w-screen-xl mx-auto px-4 xl:relative">
+                    <div class="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5">
+                        <div
+                            class="px-8 h-32 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
+                            <svg fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 461.173 461.173" xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M199.177,284.502c5.276-8.499,12.431-16.011,21.484-21.907c-1.518-2.205-2.612-4.708-3.164-7.383l-12.101-59.167 l26.176,52.095c2.273,4.524,6.66,7.61,11.686,8.221l59.965,7.286c8.289,1.006,15.825-4.895,16.833-13.186 c1.007-8.289-4.896-15.826-13.186-16.833l-51.918-6.308l-22.537-44.852l17.329,19.384l2.66-9.284 c3.429-11.969-3.494-24.451-15.463-27.88l-36.876-10.565c-12.625-3.617-25.681,4.296-28.3,17.18 c-24.04,118.252-22.612,110.378-22.612,113.199H199.177z">
+                                                </path>
+                                                <circle cx="236.485" cy="112.261" r="33.371"></circle>
+                                                <path
+                                                    d="M301.324,279.283c-7.19-0.874-56.242-6.833-62.225-7.561c-11.444,4.593-21.079,13.021-27.121,23.947 c131.057,11.545,122.354,10.415,125.87,11.934H187.585c-8.35,0-15.119,6.769-15.119,15.119s6.769,15.119,15.119,15.119 c164.747,0,161.159-0.109,161.159-0.109c10.519,0,19.078-8.505,19.132-19.034l0.111-21.598 c0.081-15.858-12.724-28.762-28.549-28.843l-10.519-0.054C322.443,276.09,312.204,280.605,301.324,279.283z">
+                                                </path>
+                                                <path
+                                                    d="M414.758,321.053c0.068,0,0.135,0.001,0.202,0.001c17.567,0,31.863-14.186,31.972-31.778 c0.109-17.66-14.118-32.064-31.778-32.174c-0.068,0-0.135-0.001-0.202-0.001c-17.567,0.001-31.862,14.186-31.971,31.778 C382.871,306.539,397.098,320.944,414.758,321.053z">
+                                                </path>
+                                                <path
+                                                    d="M29.893,337.478c4.434,0,124.984,0,129.787,0c-2.109-3.615-3.477-7.738-3.869-12.183 c-0.829-9.404,2.885-18.157,9.319-24.106c-10.076,0-130.567,0-135.237,0c-10.021,0-18.144,8.123-18.144,18.144 C11.749,329.354,19.872,337.478,29.893,337.478z">
+                                                </path>
+                                                <path
+                                                    d="M445.464,350.864c-4.729,0-425.67,0-429.755,0C7.033,350.864,0,357.897,0,366.574c0,8.676,7.033,15.709,15.709,15.709 h429.755c8.676,0,15.709-7.033,15.709-15.709C461.173,357.897,454.14,350.864,445.464,350.864z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
 
-                <p class="font-normal text-gray-400 text-lg md:text-xl text-center uppercase mb-6">Feedbacks</p>
-
-                <h1 class="font-semibold text-gray-900 text-2xl md:text-4xl text-center leading-normal mb-14">What People Say <br> About D’house</h1>
-
-                <div class="hidden xl:block xl:absolute top-0">
-                    <img src="assets/image/testimoni-1.png" alt="Image">
-                </div>
-
-                <div class="hidden xl:block xl:absolute top-32">
-                    <img src="assets/image/testimoni-2.png" alt="Image">
-                </div>
-
-                <div class="flex flex-col md:flex-row md:items-center justify-center md:space-x-8 lg:space-x-12 mb-10 md:mb-20">
-
-                    <div class="bg-gray-100 rounded-lg mb-10 md:mb-0">
-                        <img src="assets/image/testimoni-3.png" alt="Image" class="mx-8 my-8">
-
-                        <div class="flex items-center gap-5 mx-8">
-                            <i data-feather="star" class="text-yellow-500"></i>
-                            <i data-feather="star" class="text-yellow-500"></i>
-                            <i data-feather="star" class="text-yellow-500"></i>
-                            <i data-feather="star" class="text-yellow-500"></i>
-                            <i data-feather="star" class="text-yellow-500"></i>
                         </div>
 
-                        <p class="font-normal text-sm lg:text-md text-gray-400 mx-8 my-8">I recommend anyone to buy house on <br> D’house. I received great customer service <br> from the specialists who helped me.</p>
-
-                        <h3 class="font-semibold text-gray-900 text-xl md:text-2xl lg:text-3xl mx-8 mb-8">Brooklyn Simmons</h3>
-                    </div>
-
-                    <div class="bg-gray-100 rounded-lg">
-                        <img src="assets/image/testimoni-4.png" alt="Image" class="mx-8 my-8">
-
-                        <div class="flex items-center gap-5 mx-8">
-                            <i data-feather="star" class="text-yellow-500"></i>
-                            <i data-feather="star" class="text-yellow-500"></i>
-                            <i data-feather="star" class="text-yellow-500"></i>
-                            <i data-feather="star" class="text-yellow-500"></i>
-                            <i data-feather="star" class="text-yellow-500"></i>
-                        </div>
-
-                        <p class="font-normal text-sm lg:text-md text-gray-400 mx-8 my-8">D’house is the best property agent in the <br> world. I received great customer service <br> from the D’house agent</p>
-
-                        <h3 class="font-semibold text-gray-900 text-xl md:text-2xl lg:text-3xl mx-8 mb-8">Ralph Edwards</h3>
-                    </div>
-
-                </div>
-
-            </div> <!-- container.// -->
-
-        </section>
-        <!-- testimoni section //end -->
-
-
-        <!-- footer -->
-        <footer class="bg-white py-10 md:py-16" id="sobre">
-
-            <div class="container max-w-screen-xl mx-auto px-4">
-
-                <div class="flex flex-col lg:flex-row justify-between">
-                    <div class="text-center lg:text-left mb-10 lg:mb-0">
-                        <div class="flex justify-center lg:justify-start mb-5">
-                            <img src="assets/image/footer-logo.png" alt="Image">
-                        </div>
-
-                        <p class="font-light text-gray-400 text-xl mb-10">Get your dream house with <br> D’house</p>
-
-                        <div class="flex items-center justify-center lg:justify-start space-x-5">
-                            <a href="#" class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
-                                <i data-feather="facebook"></i>
-                            </a>
-
-                            <a href="#" class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
-                                <i data-feather="twitter"></i>
-                            </a>
-
-                            <a href="#" class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
-                                <i data-feather="linkedin"></i>
-                            </a>
+                        <div class="text-center md:text-left">
+                            <h4 class="font-semibold text-gray-900 text-2xl mb-2">Yoga Massagem Ayurvédica</h4>
+                            <p class="font-normal text-gray-400 text-md leading-relaxed break-all">A prática combina
+                                Yoga e Massagem Ayurvédica, enfocando respiração, circulação e energia vital. Com
+                                deslizamentos e alongamentos, promove relaxamento físico e mental, buscando bem-estar
+                                completo.</p>
                         </div>
                     </div>
 
-                    <div class="text-center lg:text-left mb-10 lg:mb-0">
-                        <h4 class="font-semibold text-gray-900 text-2xl mb-6">Sitemap</h4>
+                    <div class="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5">
+                        <div
+                            class="px-8 h-32 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
+                            <svg fill="#000000" height="64px" width="64px" version="1.1" id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 465.647 465.647" xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g id="XMLID_117_">
+                                        <path id="XMLID_118_"
+                                            d="M395.675,327.22c33.594,0,60.802-27.224,60.802-60.801c0-33.577-27.208-60.809-60.802-60.809 c-33.576,0-60.801,27.232-60.801,60.809C334.874,299.995,362.099,327.22,395.675,327.22z">
+                                        </path>
+                                        <path id="XMLID_119_"
+                                            d="M146.247,66.868c3.805,1.433,7.896,1.275,11.909,0.049c-0.335,13.906,3.819,27.997,13.293,39.626 c21.063,25.887,59.145,29.788,85.031,8.717c25.888-21.071,29.789-59.136,8.709-85.032c-20.681-25.417-57.681-29.509-83.535-9.711 c-1.8-7.284-5.986-13-12.163-15.325c-12.1-4.56-27.129,5.558-33.545,22.584C129.53,44.811,134.163,62.316,146.247,66.868z">
+                                        </path>
+                                        <path id="XMLID_120_"
+                                            d="M433.041,395.233h-80.988l-12.052-21.764c4.043-9.918,4.951-21.182,1.672-32.239 c-6.528-22.004-27.208-35.814-49.147-34.756c4.791-3.375,8.82-7.96,11.272-13.754c7.02-16.582-0.717-35.719-17.307-42.748 l-59.988-25.434l-36.729-37.11c0.319-1.33,0.446-2.237,0.256-2.237c5.714-19.456-1.067-41.306-18.5-53.765 c-22.019-15.745-52.634-10.65-68.364,11.368c0,0-36.902,60.49-55.038,81.219C37.684,235.851,28.704,241.63,0,265.049v39.873 c2.005-0.111,4.299-0.246,7.165-0.406c8.676-0.279,21.062-0.685,35.933-1.171c14.87-0.31,32.223-0.597,50.817-0.469 c9.283,0.063,18.898,0.135,28.658,0.199c2.754,0.047,5.54,0.096,8.31,0.151c1.417-1.648,2.963-3.272,4.315-4.935 c10.173-12.069,19.773-28.436,28.053-44.968l21.428,21.66c2.993,3.024,6.544,5.429,10.46,7.083l65.912,27.941 c3.103,1.314,6.288,1.95,9.488,2.277c-24.104,9.019-84.857,30.568-120.454,32.589c-24.44,0.271-80.561-1.003-150.085,0.978v67.337 v47.182c40.248,1.146,114.136,1.925,154.208,0.039c48.064-3.717,101.892-26.197,135.213-43.645l14.886,26.874 c5.748,10.372,16.669,16.805,28.53,16.805h100.204c18.007,0,32.606-14.601,32.606-32.605 C465.647,409.832,451.048,395.233,433.041,395.233z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
 
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Home</a>
-
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Features</a>
-
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Gallery</a>
-
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Testimoni</a>
-
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Book a meeting</a>
+                        <div class="text-center md:text-left">
+                            <h4 class="font-semibold text-gray-900 text-2xl mb-2">Thai Yoga Massagem</h4>
+                            <p class="font-normal text-gray-400 text-md leading-relaxed">Thai Yoga Massagem: Essa
+                                técnica combina alongamentos assistidos, pressões rítmicas e manipulações articulares.
+                                De uma forma geral promove alívio de dores musculares, proporcionando relaxamento e
+                                equilíbrio corpo e mente.</p>
+                        </div>
                     </div>
 
-                    <div class="text-center lg:text-left mb-10 lg:mb-0">
-                        <h4 class="font-semibold text-gray-900 text-2xl mb-6">Landing</h4>
+                    <div class="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5">
+                        <div
+                            class="px-8 h-32 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
+                            <svg fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 461.479 461.479" xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <polygon
+                                                    points="176.13,269.017 153.73,272.493 153.73,299.368 184.191,299.368 ">
+                                                </polygon>
+                                                <path
+                                                    d="M66.283,226.6l1.957,0.29c5.369-7.314,13.259-12.107,22.226-13.497l59.144-9.178c1.217-3.415,2.61-7.169,4.121-11.123 v10.483l42.225-6.553c5.613-0.871,11.317-0.334,16.672,1.582l22.511-3.233v-15.478c10.989,16.385,12.064,17.987,19.292,28.765 l-47.337,6.799c-8.402,1.206-14.235,8.996-13.028,17.397c1.211,8.423,9.019,14.236,17.398,13.028l69.548-9.923 c5.585-0.797,10.375-4.393,12.699-9.533c2.325-5.14,1.867-11.116-1.227-15.833c-7.182-10.947-19.608-29.614-43.783-65.66 c-2.854-4.255-7.641-6.808-12.764-6.808c-4.449,0-58.545,0-82.673,0c-6.132,0-11.677,3.645-14.109,9.274 c-6.588,15.249-16.309,38.68-21.553,55.729l-46.816-6.934c-8.394-1.249-16.211,4.554-17.455,12.951 C52.088,217.54,57.886,225.355,66.283,226.6z">
+                                                </path>
+                                                <circle cx="194.601" cy="96.119" r="31.853"></circle>
+                                                <path
+                                                    d="M92.902,229.1c-9.909,1.537-16.695,10.816-15.157,20.725c1.537,9.905,10.81,16.701,20.725,15.156l87.469-13.572 c-3.975-4.457-6.714-10.063-7.61-16.294c-0.997-6.941,0.335-13.856,3.748-19.853L92.902,229.1z">
+                                                </path>
+                                                <path
+                                                    d="M219.903,278.032c3.513-2.363,7.204-4.385,11.027-6.067l-3.279-12.347l-13.922,2c-9.418,1.358-18.462-1.668-25.126-7.56 l11.653,43.876C205.384,290.102,212.021,283.335,219.903,278.032z">
+                                                </path>
+                                                <path
+                                                    d="M259.326,282.704c-19.935,0-37.865,10.94-47.208,27.838c80.688,7.065,120.864,10.297,125.708,11.852 c0.051,0.016,0.037,0.09-0.016,0.09H188.137c-8.146,0-15.156,6.26-15.539,14.397c-0.41,8.688,6.513,15.861,15.112,15.861 c165.351,0,161.221-0.107,161.147-0.109c0.039,0,0.077,0,0.116,0c10.527,0,19.092-8.51,19.146-19.047 c0.128-24.901,0.128-21.777,0.075-23.241c-0.549-15.127-12.875-27.153-28.012-27.23l-80.578-0.411 C259.512,282.704,259.417,282.704,259.326,282.704z">
+                                                </path>
+                                                <path
+                                                    d="M29.913,352.379c5.524,0,126.209,0,129.872,0c-2.11-3.617-3.479-7.743-3.871-12.19 c-0.829-9.41,2.887-18.169,9.326-24.122c-10.083,0-130.653,0-135.327,0c-10.028,0-18.156,8.129-18.156,18.156 C11.757,344.249,19.885,352.379,29.913,352.379z">
+                                                </path>
+                                                <path
+                                                    d="M445.759,365.775c-4.732,0-425.953,0-430.039,0c-8.682,0-15.72,7.038-15.72,15.719c0,8.681,7.038,15.719,15.72,15.719 h430.039c8.682,0,15.72-7.038,15.72-15.719C461.479,372.814,454.44,365.775,445.759,365.775z">
+                                                </path>
+                                                <path
+                                                    d="M388.814,351.382h55.716c3.136,0,5.678-2.542,5.678-5.678c0-17.413,0.05-16.531-0.078-17.331 c-0.432-2.707-2.771-4.778-5.6-4.778h-10.118c7.726-5.797,12.751-15.008,12.815-25.41c0.109-17.672-14.127-32.086-31.799-32.195 c-0.068,0-0.135,0-0.202,0c-17.578,0-31.884,14.196-31.993,31.799c-0.065,10.546,4.981,19.929,12.815,25.807h-7.234 c-3.136,0-5.678,2.542-5.678,5.678c0,3.544,0,13.041,0,16.431C383.136,348.84,385.678,351.382,388.814,351.382z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
 
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Mobile App</a>
+                        </div>
 
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Property</a>
-
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Personal Website</a>
-
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Web Developer</a>
-
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Online Course</a>
-
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Donation</a>
+                        <div class="text-center md:text-left">
+                            <h4 class="font-semibold text-gray-900 text-2xl mb-2">Massagem Abhyanga</h4>
+                            <p class="font-normal text-gray-400 text-md leading-relaxed">A massagem ayurvédica
+                                "abhyanga" da Índia utiliza movimentos suaves com óleos aquecidos, promovendo bem-estar
+                                físico e mental. Recomendada para dores crônicas e problemas articulares.</p>
+                        </div>
                     </div>
 
-                    <div class="text-center lg:text-left">
-                        <h4 class="font-semibold text-gray-900 text-2xl mb-6">Utility</h4>
+                    <div class="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5">
+                        <div
+                            class="px-8 h-32 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
+                            <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px"
+                                viewBox="0 0 945.405 945.405" xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <path
+                                            d="M615.6,894.153H0v-57.4c11.2,8.9,25.5,14.301,40.9,14.301h532.2L615.6,894.153z M266.4,51.252c-33,0-59.8,26.8-59.8,59.8 c0,20.5,10.3,38.6,26.1,49.4c6.8-18.8,17.8-36.1,32.4-50.7s31.9-25.6,50.7-32.4C305,61.553,286.9,51.252,266.4,51.252z M249.3,207.953c0,63,51.101,114,114,114c62.9,0,114-51.1,114-114c0-63-51.1-114-114-114c-13.399,0-26.2,2.3-38.1,6.5 c-32.3,11.5-58,37.1-69.4,69.4C251.6,181.853,249.3,194.652,249.3,207.953z M187.4,365.252c-26.7,59.2-84.9,210.5-100.9,248.6 h198.6c4.4-10.799,9.301-21.299,14.7-31.199c18.7-34.9,77.101-52.201,63.2-100.9c-0.1-0.4-0.3-0.801-0.4-1.301l52.301,49.602 c3.899,3.699,8.6,6.699,13.6,8.6l143,54.6c4.8,1.801,9.8,2.699,14.7,2.699c16.6,0,32.2-10.1,38.399-26.5 c8.101-21.199-2.5-45-23.8-53.1L474.4,468.053c-5.9-2.3-11.301-5.7-15.9-10c0,0-111.3-105.6-111.4-105.7 c-4.699-4.5-10.8-7.4-17.199-9.5c-1.5-0.5-3.101-1-4.7-1.4c-1.7-0.5-3.5-1-5.3-1.4c-27.801-7.4-58.7-13.7-87.3-11.2 c-9.4,0.8-19.7,3.2-27.7,8.7C195.7,344.152,191.9,355.353,187.4,365.252z M40.9,826.053h542.6l52,52.699c4.9,5,10.8,8.9,17.1,11.5 c6.2,2.5,12.801,3.9,19.601,3.9h221.6c28.8,0,52-23.6,51.601-52.4c-0.5-28.301-24.101-50.699-52.4-50.699H693.8L558.4,653.653 c-10.5-10.701-16.7-15.1-35.5-15.1c-32.4,0-482,0.299-482,0.299c-22.6,0-40.9,18.301-40.9,40.9v94.801v10.6 C0,807.752,18.3,826.053,40.9,826.053z M871,637.452c0-65.299-53-118.299-118.3-118.299s-118.3,53-118.3,118.299 c0,65.301,53,118.301,118.3,118.301S871,702.852,871,637.452z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
 
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">FAQ</a>
+                        <div class="text-center md:text-left">
+                            <h4 class="font-semibold text-gray-900 text-2xl mb-2">Massagem Terapêutica</h4>
+                            <p class="font-normal text-gray-400 text-md leading-relaxed">Técnica manual para alívio de
+                                tensões musculares, melhoria da circulação e redução do estresse, proporcionando
+                                benefícios físicos e mentais, incluindo tratamento de dores musculares.</p>
+                        </div>
+                    </div>
 
-                        <a href="#" class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Terms & Conditions</a>
+                    <div class="flex flex-col md:flex-row justify-center xl:justify-start space-x-4 mb-5">
+                        <div
+                            class="px-8 h-32 mx-auto md:mx-0 bg-gray-200 rounded-lg flex items-center justify-center mb-5 md:mb-0">
+                            <svg fill="#000000" height="64px" width="64px" version="1.1" id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 460.042 460.042" xml:space="preserve">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M287.523,224.484v-27.015l-22.807,3.276c-6.099,0.879-12.209-0.249-17.568-3.191c-1.118,2.036-2.395,3.971-3.804,5.8 h3.696C263.673,203.354,278.477,211.597,287.523,224.484z">
+                                                </path>
+                                                <circle cx="245.451" cy="33.06" r="33.06"></circle>
+                                                <path
+                                                    d="M152.77,370.686l0.571-0.284c-0.822-0.771,1.507,1.574-27.72-28.149l-6.049,3.006c-9.159,4.55-12.99,15.597-8.614,24.84 l37.48,79.196c4.436,9.376,15.633,13.371,24.997,8.938c9.372-4.435,13.373-15.626,8.938-24.997L152.77,370.686z">
+                                                </path>
+                                                <path
+                                                    d="M289.957,345.259l-5.913-2.938c-28.95,29.441-26.885,27.368-27.722,28.148l0.437,0.217l-29.601,62.55 c-4.436,9.371-0.434,20.562,8.938,24.997c9.363,4.433,20.56,0.439,24.997-8.938l37.479-79.196 C302.946,360.855,299.116,349.809,289.957,345.259z">
+                                                </path>
+                                                <path
+                                                    d="M226.42,361.277c6.16,6.059,16.066,5.973,22.122-0.186l37.123-37.753c3.266-3.32,4.881-7.923,4.408-12.556 c-0.688-6.739-5.404-52.971-6.028-59.08c-0.558-19.915-16.982-35.975-37.005-35.975h-18.399 c-6.216,3.271-13.285,5.132-20.784,5.132c-7.335,0-14.482-1.817-20.784-5.132h-24.382c-20.023,0-36.447,16.06-37.005,35.975 c-0.623,6.109-5.34,52.34-6.028,59.08c-0.472,4.633,1.143,9.236,4.408,12.556l37.123,37.753 c6.057,6.161,15.961,6.243,22.122,0.186s6.244-15.961,0.186-22.122l-31.969-32.511c5.795-56.801,5.422-52.836,5.429-53.927 c0.009-1.759,1.439-3.178,3.197-3.173c1.758,0.005,3.18,1.431,3.18,3.189v48.582l28.829,29.318 c5.498,5.592,8.142,12.919,7.961,20.184h9.482c-0.181-7.266,2.463-14.593,7.961-20.184l28.625-29.111V252.96 c0-1.772,1.401-3.227,3.172-3.292c1.771-0.066,3.278,1.28,3.408,3.047c0,0.001,0,0.001,0,0.001 c0.08,1.089,0.699,7.348,5.429,53.928l-31.969,32.511C220.176,345.316,220.26,355.221,226.42,361.277z">
+                                                </path>
+                                                <path
+                                                    d="M207.858,143.645c-17.905,0-32.421,14.515-32.421,32.421s14.515,32.421,32.421,32.421 c13.296,0,24.717-8.008,29.719-19.46c-2.534-3.565-4.277-7.742-4.93-12.291c-0.867-6.035,0.206-12.05,3.027-17.327 C230.006,149.966,219.671,143.645,207.858,143.645z">
+                                                </path>
+                                                <path
+                                                    d="M348.171,153.161l-0.018-0.027l-0.061-0.091c-5.438-8.107-40.839-60.893-46.492-69.321 c-2.961-4.416-7.93-7.066-13.247-7.066c-2.636,0,12.086,0-85.805,0c-1.811,0-3.607,0.308-5.314,0.911l-62.171,21.966 c-8.975,3.171-13.183,13.451-9.04,21.998l28.178,58.134c2.153,4.442,6.098,7.425,10.543,8.522 c-1.087-3.859-1.681-7.922-1.681-12.123c0-11.088,4.058-21.24,10.756-29.07l-11.306-23.324l40.518-14.317v22.181 c1.586-0.171,3.195-0.264,4.826-0.264c14.872,0,28.066,7.291,36.218,18.479c3.674-2.664,7.962-4.416,12.581-5.079l30.867-4.433 v-20.231c12.834,19.136,10.648,15.876,20.023,29.855l-48.241,6.929c-10.569,1.519-15.567,10.139-14.412,18.184 c1.252,8.719,9.375,14.773,18.057,13.521l74.24-10.663C348.616,176.196,354.801,163.084,348.171,153.161z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="text-center md:text-left">
+                            <h4 class="font-semibold text-gray-900 text-2xl mb-2">Massagem integrativa para alívio da
+                                dor</h4>
+                            <p class="font-normal text-gray-400 text-md leading-relaxed">A terapia integrativa trata a
+                                dor por meio de pontos gatilhos, relaxamento muscular e alongamentos. A avaliação
+                                inicial define o número de sessões, focando em abordagens nos pontos de tensão para
+                                melhorar a amplitude de movimento.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div> <!-- container.// -->
+
+    </section>
+    <!-- feature section //end -->
+
+    <!-- gallery section -->
+    <section class="bg-white py-10 md:py-16" id="fotos">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <h1 class="font-semibold text-gray-900 text-4xl text-center mb-10">Fotos</h1>
+
+
+
+            <div class="flex space-x-4 md:space-x-6 lg:space-x-8">
+                <div>
+                    <img src="assets/image/gallery-1.png" alt="image"
+                        class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500">
+                    <img src="assets/image/gallery-4.png" alt="image"
+                        class="hover:opacity-75 transition ease-in-out duration-500">
+                </div>
+
+                <div>
+                    <img src="assets/image/gallery-2.png" alt="image"
+                        class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500">
+                    <img src="assets/image/gallery-5.png" alt="image"
+                        class="mb-3 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500">
+                    <img src="assets/image/gallery-6.png" alt="image"
+                        class="hover:opacity-75 transition ease-in-out duration-500">
+                </div>
+
+                <div>
+                    <img src="assets/image/gallery-3.png" alt="image"
+                        class="mb-4 md:mb-6 lg:mb-8 hover:opacity-75 transition ease-in-out duration-500">
+                    <img src="assets/image/gallery-7.png" alt="image"
+                        class="hover:opacity-75 transition ease-in-out duration-500">
+                </div>
+            </div>
+
+        </div> <!-- container.// -->
+
+    </section>
+    <!-- gallery section //end -->
+
+    <!-- testimoni section -->
+    <section class="bg-white py-10 md:py-16" id="feedbacks">
+
+        <div class="container max-w-screen-xl mx-auto px-4 xl:relative">
+
+            <p class="font-normal text-gray-400 text-lg md:text-xl text-center uppercase mb-6">Feedbacks</p>
+
+            <h1 class="font-semibold text-gray-900 text-2xl md:text-4xl text-center leading-normal mb-14">What People
+                Say <br> About D’house</h1>
+
+            <div class="hidden xl:block xl:absolute top-0">
+                <img src="assets/image/testimoni-1.png" alt="Image">
+            </div>
+
+            <div class="hidden xl:block xl:absolute top-32">
+                <img src="assets/image/testimoni-2.png" alt="Image">
+            </div>
+
+            <div
+                class="flex flex-col md:flex-row md:items-center justify-center md:space-x-8 lg:space-x-12 mb-10 md:mb-20">
+
+                <div class="bg-gray-100 rounded-lg mb-10 md:mb-0">
+                    <img src="assets/image/testimoni-3.png" alt="Image" class="mx-8 my-8">
+
+                    <div class="flex items-center gap-5 mx-8">
+                        <i data-feather="star" class="text-yellow-500"></i>
+                        <i data-feather="star" class="text-yellow-500"></i>
+                        <i data-feather="star" class="text-yellow-500"></i>
+                        <i data-feather="star" class="text-yellow-500"></i>
+                        <i data-feather="star" class="text-yellow-500"></i>
+                    </div>
+
+                    <p class="font-normal text-sm lg:text-md text-gray-400 mx-8 my-8">I recommend anyone to buy house on
+                        <br> D’house. I received great customer service <br> from the specialists who helped me.</p>
+
+                    <h3 class="font-semibold text-gray-900 text-xl md:text-2xl lg:text-3xl mx-8 mb-8">Brooklyn Simmons
+                    </h3>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg">
+                    <img src="assets/image/testimoni-4.png" alt="Image" class="mx-8 my-8">
+
+                    <div class="flex items-center gap-5 mx-8">
+                        <i data-feather="star" class="text-yellow-500"></i>
+                        <i data-feather="star" class="text-yellow-500"></i>
+                        <i data-feather="star" class="text-yellow-500"></i>
+                        <i data-feather="star" class="text-yellow-500"></i>
+                        <i data-feather="star" class="text-yellow-500"></i>
+                    </div>
+
+                    <p class="font-normal text-sm lg:text-md text-gray-400 mx-8 my-8">D’house is the best property agent
+                        in the <br> world. I received great customer service <br> from the D’house agent</p>
+
+                    <h3 class="font-semibold text-gray-900 text-xl md:text-2xl lg:text-3xl mx-8 mb-8">Ralph Edwards</h3>
+                </div>
+
+            </div>
+
+        </div> <!-- container.// -->
+
+    </section>
+    <!-- testimoni section //end -->
+
+
+    <!-- footer -->
+    <footer class="bg-white py-10 md:py-16" id="sobre">
+
+        <div class="container max-w-screen-xl mx-auto px-4">
+
+            <div class="flex flex-col lg:flex-row justify-between">
+                <div class="text-center lg:text-left mb-10 lg:mb-0">
+                    <div class="flex justify-center lg:justify-start mb-5">
+                        <img src="assets/image/footer-logo.png" alt="Image">
+                    </div>
+
+                    <p class="font-light text-gray-400 text-xl mb-10">Get your dream house with <br> D’house</p>
+
+                    <div class="flex items-center justify-center lg:justify-start space-x-5">
+                        <a href="#"
+                            class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="facebook"></i>
+                        </a>
+
+                        <a href="#"
+                            class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="twitter"></i>
+                        </a>
+
+                        <a href="#"
+                            class="px-3 py-3 bg-gray-200 text-gray-700 rounded-full hover:bg-green-800 hover:text-white transition ease-in-out duration-500">
+                            <i data-feather="linkedin"></i>
+                        </a>
                     </div>
                 </div>
 
-            </div> <!-- container.// -->
+                <div class="text-center lg:text-left mb-10 lg:mb-0">
+                    <h4 class="font-semibold text-gray-900 text-2xl mb-6">Sitemap</h4>
 
-        </footer>
-        <!-- footer //end -->
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Home</a>
 
-        <script>
-            feather.replace()
-        </script>
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Features</a>
 
-    </body>
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Gallery</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Testimoni</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Book
+                        a meeting</a>
+                </div>
+
+                <div class="text-center lg:text-left mb-10 lg:mb-0">
+                    <h4 class="font-semibold text-gray-900 text-2xl mb-6">Landing</h4>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Mobile
+                        App</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Property</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Personal
+                        Website</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Web
+                        Developer</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Online
+                        Course</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Donation</a>
+                </div>
+
+                <div class="text-center lg:text-left">
+                    <h4 class="font-semibold text-gray-900 text-2xl mb-6">Utility</h4>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">FAQ</a>
+
+                    <a href="#"
+                        class="block font-light text-gray-400 text-xl mb-6 hover:text-gray-800 transition ease-in-out duration-300">Terms
+                        & Conditions</a>
+                </div>
+            </div>
+
+        </div> <!-- container.// -->
+
+    </footer>
+    <!-- footer //end -->
+
+    <script>
+        feather.replace()
+    </script>
+
+</body>
+
 </html>
